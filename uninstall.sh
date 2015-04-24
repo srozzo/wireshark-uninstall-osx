@@ -88,6 +88,9 @@ forget_pkg() {
   pkgutil --forget "${1}" > /dev/null 2>&1
 }
 
+# Unload named launchd job
+#
+# @param1 [string] $1 path to launchd job 
 unload_launchd_job() {
   return $(launchctl unload ${launchd_job})
 }
